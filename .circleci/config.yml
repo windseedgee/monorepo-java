@@ -1,31 +1,17 @@
 version: '2.1'
+
 setup: true
+
 orbs:
   path-filtering: circleci/path-filtering@0.1.7
   dynamic: bjd2385/dynamic-continuation@3.8.1
+
 workflows:
-  generate-config:
+  on-commit:
     jobs:
-      #      - path-filtering/filter:
-      #          base-revision: main
-      #          config-path: .circleci/continue_config.yml
-      #          mapping: |
-      #            orders/.* build-order true
-      #            users/.* build-users true
-      - path-filtering/filter:
-          name: generate-users-config
+      - dynamic/continue:
           base-revision: main
-          config-path: .circleci/build-users-config.yml
-          mapping: |
-            users/.* build-users true
-      - path-filtering/filter:
-          name: generate-orders-config
-          base-revision: main
-          config-path: .circleci/build-orders-config.yml
-          mapping: |
-            orders/.* build-orders true
-#            orders/.* build-orders true .circleci/build-orders-config.yml
-#      - path-filtering/filter:
-#          base-revision: main
-#          config-path: .circleci/continue-config.yml
-#          mapping: .circleci/mapping.conf
+          context: circleci
+          modules: |
+            /users
+            /orders
