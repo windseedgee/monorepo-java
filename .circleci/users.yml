@@ -3,13 +3,8 @@ version: 2.1
 orbs:
   maven: circleci/maven@1.2.0
 
-parameters:
-  build-users:
-    type: boolean
-    default: false
-
 jobs:
-  build:
+  build-users:
     docker:
       - image: alpine:3.15
     steps:
@@ -28,6 +23,5 @@ jobs:
 workflows:
 
   users:
-    #    when: << pipeline.parameters.build-users >>
     jobs:
-      - build
+      - build-users
