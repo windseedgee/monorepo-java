@@ -19,7 +19,7 @@ jobs:
 
 workflows:
   # Name of workflow
-  ori-service-build:
+  monorepo-build:
     # List of jobs that will run
     jobs:
       - build
