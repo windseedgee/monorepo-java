@@ -12,7 +12,7 @@ public class UsersApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(UsersApplication.class, args);
-        log.debug("test users---");
+        log.debug("test users----");
     }
 
 }
