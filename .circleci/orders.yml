@@ -4,7 +4,7 @@ orbs:
   maven: circleci/maven@1.2.0
 
 jobs:
-  build:
+  build-orders:
     docker:
       - image: alpine:3.15
     steps:
@@ -24,4 +24,4 @@ workflows:
 
   orders:
     jobs:
-      - build
+      - build-orders
