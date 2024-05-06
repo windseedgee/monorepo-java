@@ -3,8 +3,6 @@ version: 2.1
 orbs:
   maven: circleci/maven@1.2.0
 
-# the default pipeline parameters, which will be updated according to
-# the results of the path-filtering orb
 parameters:
   build-users:
     type: boolean
@@ -26,15 +24,10 @@ jobs:
           command: |
             ls -al
             echo '^^^The files in your repo^^^'
-# here we specify our workflows, most of which are conditionally
-# executed based upon pipeline parameter values. Each workflow calls a
-# specific job defined above, in the jobs section.
+
 workflows:
-  # when pipeline parameter, run-build-service-1-job is true, the
-  # build-service-1 job is triggered.
+
   users:
     when: << pipeline.parameters.build-users >>
     jobs:
       - build
-  # when pipeline parameter, run-build-service-2-job is true, the
-  # build-service-2 job is triggered.
