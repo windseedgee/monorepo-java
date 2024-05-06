@@ -16,6 +16,11 @@ workflows:
           config-path: .circleci/build-users-config.yml
           mapping: |
             users/.* build-users true .circleci/build-users-config.yml
+      - path-filtering/filter:
+          base-revision: main
+          config-path: .circleci/build-orders-config.yml
+          mapping: |
+            orders/.* build-orders true .circleci/build-orders-config.yml
 #            orders/.* build-orders true .circleci/build-orders-config.yml
 #      - path-filtering/filter:
 #          base-revision: main
