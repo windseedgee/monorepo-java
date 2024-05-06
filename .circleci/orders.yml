@@ -23,6 +23,5 @@ jobs:
 workflows:
 
   orders:
-    #    when: << pipeline.parameters.build-orders >>
     jobs:
       - build
