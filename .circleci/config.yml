@@ -2,6 +2,7 @@ version: '2.1'
 setup: true
 orbs:
   path-filtering: circleci/path-filtering@0.1.7
+  dynamic: bjd2385/dynamic-continuation@3.8.1
 workflows:
   generate-config:
     jobs:
