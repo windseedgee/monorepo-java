@@ -7,4 +7,6 @@ public class CommonConstant {
     public static final String ORDERS_SERVICE_NAME = "orders-service";
 
     public static final String COMMON_SERVICE_NAME = "commons-service";
+
+    public static final String TEST = "test";
 }
