@@ -13,7 +13,7 @@ jobs:
           name: Build
           command: |
             ls -l
-            cd users/
+            cd commons/
             mvn install
 #      - run:
 #          name: Test
