@@ -16,8 +16,7 @@ jobs:
       #            mvn install
       - run:
           name: Test
-          command: ｜
-            mvn test
+          command: mvn test
 
 workflows:
   users:
