@@ -9,19 +9,15 @@ jobs:
       - image: maven:latest
     steps:
       - checkout
-      - run:
-          name: Build
-          command: |
-            ls -l
-            cd commons/
-            mvn install
-            cd ..
-            mvn install
 #      - run:
-#          name: Test
-#          command: ｜
-#            cd /users
-#            mvn test
+      #          name: Build
+      #          command: |
+      #            ls -l
+      #            mvn install
+      - run:
+          name: Test
+          command: ｜
+            mvn test
 
 workflows:
   users:
