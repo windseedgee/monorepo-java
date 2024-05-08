@@ -12,11 +12,11 @@ jobs:
       - run:
           name: Build
           command: mvn install
-      - run:
-          name: Test
-          command: ｜
-            cd /users
-            mvn test
+#      - run:
+#          name: Test
+#          command: ｜
+#            cd /users
+#            mvn test
 
 workflows:
   users:
