@@ -1,12 +1,12 @@
 version: 2.1
 
 orbs:
-  maven: circleci/maven@1.2.0
+  maven: circleci/maven@1.4.1
 
 jobs:
   build-users:
     docker:
-      - image: alpine:3.15
+      - image: maven:latest
     steps:
       - checkout
       - run:
