@@ -19,6 +19,7 @@
     <modules>
         <module>users</module>
         <module>orders</module>
+        <module>commons</module>
     </modules>
 
     <dependencyManagement>
