@@ -15,8 +15,8 @@ jobs:
             ls -l
             cd commons/
             mvn install
-            cd ../users/
-            mvn test
+            cd ..
+            mvn install
 #      - run:
 #          name: Test
 #          command: ｜
